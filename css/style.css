@@ -4,6 +4,7 @@ body {
 
 nav {
     background-color: rgb(36, 53, 63) !important;
+    z-index: 999;
 }
 
 h1 {

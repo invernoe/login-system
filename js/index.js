@@ -9,9 +9,6 @@ var signUpEmailInput = document.querySelector("#signUpEmailInput");
 var signUpPasswordInput = document.querySelector("#signUpPasswordInput");
 var signUpStatusMessage = document.querySelector("#signUpStatusMessage");
 
-//homepage variables
-var homepageWelcomeText = document.querySelector("#homepageWelcomeText");
-
 //regex constants
 const nameRegex = /^[a-zA-Z]{3,}$/;
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -31,7 +28,6 @@ if (activeSession) {
   if (!window.location.href.includes("homepage.html")) {
     window.location = "homepage.html";
   }
-  homepageWelcomeText.innerHTML = "Welcome " + activeSession.name;
 }
 
 function login() {
@@ -176,12 +172,4 @@ function findEmail(enteredEmail) {
     }
   }
   return -1;
-}
-
-function logout() {
-  localStorage.removeItem("activeSession");
-
-  setTimeout(function () {
-    window.location = "index.html";
-  }, 1000);
 }

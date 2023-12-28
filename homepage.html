@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-dark shadow-lg position-fixed top-0 start-0 end-0">
+    <nav
+      class="navbar navbar-dark shadow-lg position-fixed top-0 start-0 end-0"
+    >
       <div class="container-fluid mx-lg-5 mx-md-2">
         <a class="navbar-brand" href="#">SMART LOGIN</a>
         <button onclick="logout()" class="btn btn-outline-warning ms-auto">
@@ -18,14 +20,15 @@
       </div>
     </nav>
 
-    <main class="min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="box-shadow text-center w-100 py-5">
-                <h1 id="homepageWelcomeText">Welcome</h1>
-            </div>
+    <main class="min-vh-100 d-flex justify-content-center align-items-center py-5">
+      <div class="container">
+        <div class="box-shadow text-center w-100 py-5 my-5">
+          <h1 id="homepageWelcomeText">Welcome</h1>
         </div>
+        <div id="movieListContent" class="row g-5"></div>
+      </div>
     </main>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/homepage.js"></script>
   </body>
 </html>
