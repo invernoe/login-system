@@ -11,7 +11,8 @@ homepageWelcomeText.innerHTML = "Welcome " + activeSession.name;
 //get instance from XMLHttpRequest
 var httpReq = new XMLHttpRequest();
 //open channel
-httpReq.open("get",
+httpReq.open(
+  "get",
   `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${api_key}`
 );
 //send request
@@ -20,11 +21,10 @@ httpReq.send();
 httpReq.addEventListener("readystatechange", function () {
   if (httpReq.readyState == 4) {
     movies = JSON.parse(httpReq.response).results;
-  }
 
-  let htmlContent = "";
-  movies.forEach((element) => {
-    htmlContent += `<div class="col-lg-4">
+    let htmlContent = "";
+    movies.forEach((element) => {
+      htmlContent += `<div class="col-lg-4">
         <div class="card shadow text-center overflow-hidden p-0">
             <picture>
               <img class="w-100"
@@ -37,8 +37,9 @@ httpReq.addEventListener("readystatechange", function () {
         </div>
       </div>
       `;
-  });
-  movieListContent.innerHTML = htmlContent;
+    });
+    movieListContent.innerHTML = htmlContent;
+  }
 });
 
 function logout() {
