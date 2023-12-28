@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 10</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="min-vh-100">
+      <div class="container text-center py-5">
+        <div class="box-shadow p-5">
+          <h1>Smart Login System</h1>
+          <input
+            id="signUpNameInput"
+            class="form-control my-3 bg-transparent text-white"
+            type="text"
+            placeholder="Enter your name"
+          />
+          <input
+            id="signUpEmailInput"
+            class="form-control my-3 bg-transparent text-white"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <input
+            id="signUpPasswordInput"
+            class="form-control my-3 bg-transparent text-white"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <p id="signUpStatusMessage" class="d-none"></p>
+          <button onclick="signUp()" class="btn btn-outline-info w-100">Sign Up</button>
+          <p class="text-white py-4">
+            You have an account?
+            <a class="text-white text-decoration-none" href="index.html">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
